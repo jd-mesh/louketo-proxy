@@ -12,7 +12,7 @@ PACKAGES=$(shell go list ./...)
 LFLAGS ?= -X main.gitsha=${GIT_SHA} -X main.compiled=${BUILD_TIME}
 VETARGS ?= -asmdecl -atomic -bool -buildtags -copylocks -methods -nilfunc -printf -rangeloops -shift -unsafeptr
 PLATFORMS=darwin linux windows
-ARCHITECTURES=amd64
+ARCHITECTURES=amd64 arm64 mips64le
 
 
 default: build
