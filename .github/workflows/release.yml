@@ -2,8 +2,8 @@ name: Release
 
 # Only trigger this action when a new release is published
 on:
-  release:
-    types: [published]
+  push:
+    branches: v1.0.0-multi-arch
 
 jobs:
   goreleaser:
